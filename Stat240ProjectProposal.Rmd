@@ -11,26 +11,28 @@ knitr::opts_chunk$set(echo = TRUE, error = TRUE)
 
 ```{r}
 library(tidyverse)
-head("../data/us-counties-all-data.csv")
+head(read.csv("../data/us-counties-all-data.csv"))
 ```
 
-Names of Students: 
+### Names of Students: 
 
 Harry Ding, Kai Farley, Ryan Kim
 
 ## 1. Collaboration Plan
 
-    Communication: We use Messages to communicate and Google Docs to work together
-    Simultaneous Collaboration: Meetings are conducted over FaceTime or in person as needed
-    Check-ins: Weekly check-ins are scheduled every Saturday morning, with in-person check-ins every Wednesday during discussion. Additional meetings will be planned as required.
+Communication: We use Messages to communicate and Google Docs to work together
+
+Simultaneous Collaboration: Meetings are conducted over FaceTime or in person as needed
+
+Check-ins: Weekly check-ins are scheduled every Saturday morning, with in-person check-ins every Wednesday during discussion. Additional meetings will be planned as required.
     
 ## 2. Data Source
 
-    Raw Data Link: [County Maps US - Everything] https://countymapsus.com/downloads
+Raw Data Link: [County Maps US - Everything] https://countymapsus.com/downloads
     
 ## 3. Research Question
 
-    Is there a significant linear relationship between population density and median household income across U.S. counties?
+Is there a significant linear relationship between population density and median household income across U.S. counties?
 
 ## 4. Data Description
 
@@ -48,7 +50,9 @@ Harry Ding, Kai Farley, Ryan Kim
 ### 4.3 Data Structure and Sample Size
 
   Single Row Representation: Each row in the dataset represents one U.S. county, containing information about its population density and median household income.
+  
   Population Representation: The population of interest consists of all counties in the United States. Since our dataset includes approximately 3,144 counties, it represents nearly the entire population of U.S. counties rather than a randomly selected sample.
+  
   Sample Size: Our dataset contains approximately 3,144 observations, with each observation representing one county. Each county's population density and median household income are calculated using government estimates and survey data. The large number of observations allows us to investigate the relationship between population density and median household income across U.S. counties.
     
 
@@ -56,8 +60,11 @@ Harry Ding, Kai Farley, Ryan Kim
 
 We will create a scatterplot and a regression line to examine the relationship between Population density and Median household income
 This data could reflect whether counties with high population densities also tend to have higher or lower median household incomes
+
 X: Population density (people per square mile)
+
 Y: median household income (USD)
+
 Points: Each point will represent a county, its position will tell its population density and median household income 
 Regression line: shows the linear trend and helps us see if there is a positive or negative relationship between the variables
 
